@@ -5,7 +5,8 @@ import {
   Text,
   TouchableOpacity,
   View,
-  Image
+  Image,
+  CheckBox
 } from 'react-native';
 import EStyleSheet from 'react-native-extended-stylesheet';
 
@@ -194,11 +195,189 @@ export const MyRequestItem = (props) => {
     )
 }
 
+export const PriceDetails = (props) => {
+    
+    return (
+           
+            <View style={styles.price} >
+               <View>
+                <Text style={{fontSize:24,fontWeight:'bold',color:'#081344'}}>{props.priceDt}</Text>
+                </View>
+                <View>
+                <Text style={styles.buttonAED}>{props.btnName} Attestation</Text>
+                </View>
+            </View>
+            )
+}
+
+export const TxtUnderline = (props) => {
+    return (
+        <Text  {...props} style={styles.txt} >Your Bill Amount</Text>
+    )
+}
+
+export const ButtonLong = (props) => {
+    
+    return (
+           
+            <View >
+                <Text style={styles.btnLong}>{props.btnName}HJ kjh kasjd</Text>
+            </View>
+            )
+}
+
+
+export const ButtonPay = (props) => {
+    return (
+        <TouchableOpacity  style={ styles.btnPay} {...props}  >
+            <Text style={styles.txtBtn} >Pay Now</Text>
+        </TouchableOpacity>
+    )
+}
+export const Chk = (props) => {
+    return (
+        <View style={{ flexDirection:'row',justifyContent:'center',alignItems : "center",}} >
+            <View>
+                 <CheckBox  style={{color:'red'}}  />
+            </View>
+            <View>
+                 <Text >I HAVE READ AND  ageed o the termd</Text>
+                 <Text >amd akdj smdncsk sdj</Text>
+            </View>
+       </View>
+    )
+}
+
+
+export const SelectFile = (props) => {
+    return (
+        <View style={{ flexDirection: "column",alignItems:'center' ,justifyContent:'center'}} >
+        <Text style={{fontSize:20}} >Select File</Text>
+        <View style={{ flexDirection: "row",width:"30%"}}>
+            <View  style={[styles.btnFile,{borderLeftWidth:2,borderRightWidth:1}]}  {...props}  >
+                 <Image style={styles.file_img} source={require(`${assetsPath}File/file1.png`)} />
+            </View>
+            <View  style={[styles.btnFile,{borderLeftWidth:1,borderRightWidth:2}]}   {...props}  >
+            <Image style={styles.file_img} source={require(`${assetsPath}File/file2.png`)} />
+            </View>
+        </View>
+        <Text  style={{fontSize:16,padding:10}}  >File Format  :  jpeg + png + jpg</Text>
+        <Text  style={{fontSize:16}}  >File Size > 5 MB</Text>
+        </View>
+    )
+}
+
+export const ProfilePhoto = (props) => {
+    return (
+           <View style={{ flexDirection: "column",alignItems:'center' ,justifyContent:'center'}} >
+                <View style={styles.profileBorder}>
+                        <Image style={styles.profile} source={require(`${assetsPath}Profile/profile.jpg`)} />
+                </View>  
+           </View> 
+    )
+}
+
+export const ProfileName = (props) => {
+    return (
+           <View style={{ flexDirection: "column",padding:10}} >
+                <Text  style={{fontSize:20,color:'#8d847d',fontWeight:'bold'}} >Michelle</Text>
+                <Text  style={{fontSize:15,color:'#8d847d'}}  >VP Human Resources</Text> 
+           </View> 
+    )
+}
+
+export const ProfileNameEdit = (props) => {
+    return (
+           <View style={{ flexDirection: "column",alignItems:'center' ,justifyContent:'center'}} >
+                <Text  style={{fontSize:20,color:'#8d847d',fontWeight:'bold'}} >Michelle</Text>
+                <View  style={{ flexDirection: "row"}}>
+                    <Text  style={{fontSize:13,paddingHorizontal:10,color:'#4d4d4d'}}  >VP Human Resources</Text> 
+                    <Image style={styles.editIcon} source={require(`${assetsPath}Profile/edit.png`)} />
+                </View>  
+           </View> 
+    )
+}
+
+export const ButtonSlim = (props) => {
+    return (
+        <TouchableOpacity  style={[ styles.btnSlim,props.color]} {...props}  >
+            <Text style={{ fontSize : 10, color : "#FFF", fontWeight : "bold"}} >{props.btnName}</Text>
+        </TouchableOpacity>
+    )
+}
+
+
+export const FAQMenu = (props) => {
+    return (
+        <View style={{ alignItems:'center' ,justifyContent:'center'}} >
+            <View  style={styles.menu}  {...props}  >
+                 <Image style={styles.file_img} source={require(`${assetsPath}File/file1.png`)} />
+            </View>
+            <Text style={{ fontSize : 14,color:'#081344',padding:5}} >{props.btnName} General</Text>
+        </View>
+    )
+}
+
+export const BoxHeading = (props) => {
+    return (
+        <View style={{ alignItems:'center' ,justifyContent:'center'}} >
+            <View  style={styles.boxHeading}  {...props}  >
+              <Text style={{ fontSize : 17,color:'#081344',padding:5}} >{props.btnName}</Text>
+            </View>
+        </View>
+    )
+}
+
+export const Underline = (props) => {
+    return (
+        <View style={{ borderTopWidth:1,padding:10,color:'#8d847d'}} >
+        </View>
+    )
+}
+
+export const TexEdit = (props) => {
+    return (
+        <View>
+            <Text  {...props} style={{fontSize:14,color:'#081344',padding:5}} >{props.label}</Text>
+            <View style={{ borderBottomWidth:1,padding:8}} >
+                <Text  {...props} style={{fontSize:14,color:'#999999'}} >{props.data}</Text>
+            </View>
+        </View>
+    )
+}
+
+export const MenuItem = (props) => {
+    var immg = require(`${assetsPath}Dashboard/card_required.png`);
+    switch(props.type)
+    {
+        case 1: 
+            img = require(`${assetsPath}myrequests/empty1.png`);
+            break;
+        case 2: 
+            img = require(`${assetsPath}myrequests/empty2.png`);
+            break;
+        case 3: 
+            img = require(`${assetsPath}myrequests/empty3.png`);
+            break;
+    }
+    return (
+        <View style={{ flexDirection: "row",alignItems:'center'}} >
+        
+            <View  style={{paddingVertical:8}}  {...props}  >
+                 <Image style={styles.file_img} source={img} />
+            </View>
+            <View   {...props}  >
+                 <Text style={{fontSize:20,paddingHorizontal:10,color:'#8d847d'}} >{props.item}</Text>
+            </View>
+        </View>
+    )
+}
+
 const styles = EStyleSheet.create({
     loginfooter:{
         flex: 1,
         alignItems: "center",
-        height: "20%",
+        height: "23%",
         backgroundColor: "#FFF",
         paddingTop: "10 rem",
         justifyContent:"space-around"
@@ -426,5 +605,121 @@ const styles = EStyleSheet.create({
         alignSelf: "center",
         color :  "#f90a08",
         fontWeight : "bold"
+    },
+    buttonAED : {
+        width: "115 rem",
+        padding : "8 rem",
+        backgroundColor : "#295198",
+        borderRadius : "5 rem",
+        alignItems : "center",
+        alignSelf: "center",
+        textAlign:'center',
+        color:'#FFF',
+        fontSize:18,
+    },
+    price:{
+        flexDirection:'row',
+        paddingHorizontal:15,
+        height:'70 rem',
+        justifyContent:'space-between',
+        backgroundColor:'#EDECF0',
+        alignItems : "center",
+        borderRadius : "5 rem",
+
+    },
+    txt : {
+        fontSize : "$inputFontSize",
+        color : "#081344",
+        margin : "5 rem",
+        borderBottomWidth:1,
+        borderColor : "$inputTextColor",
+        paddingVertical : "5 rem",
+    }, 
+    btnLong : {
+        width: "100%",
+        padding : "12 rem",
+        backgroundColor : "#295198",
+        borderRadius : "7 rem",
+        alignItems : "center",
+        alignSelf: "center",
+        textAlign:'center',
+        color:'#FFF',
+        fontSize:18,
+    },
+    btnPay : {
+        width: "280 rem",
+        padding : "18 rem",
+        backgroundColor : "#EF6174",
+        borderRadius : "15 rem",
+        alignItems : "center",
+        alignSelf: "center",
+        margin : "8 rem",
+        fontSize:'18 rem'
+    },
+    btnFile : {
+        paddingVertical : "8 rem",
+        paddingHorizontal:"20 rem",
+        borderTopWidth: 2,
+        borderBottomWidth:2,
+        borderTopLeftRadius : "7 rem",
+        borderBottomLeftRadius : "7 rem",
+        borderTopRightRadius : "7 rem",
+        borderBottomRightRadius : "7 rem",
+        alignItems : "center",
+        alignSelf: "center",
+        flex: 1,
+        borderColor: "#081344",
+        width:"15%"
+    },
+    file_img:{
+        width: "35 rem",
+        height: "35 rem",
+    },
+    profile:{
+        width: "80 rem",
+        height: "80 rem",
+        borderRadius:"40 rem",
+    },
+    profileBorder:{
+        width: "90 rem",
+        height: "90 rem",
+        borderRadius:"50 rem",
+        borderWidth:3,
+        alignItems:'center' ,
+        justifyContent:'center',
+        borderColor:'#8d847d'
+    },
+    editIcon:{
+        width: "18 rem",
+        height: "18 rem",
+    },
+    btnSlim:{
+        width: "88 rem",
+        padding : "4 rem",
+        backgroundColor : "#EF6174",
+        borderRadius : "5 rem",
+        alignItems : "center",
+        alignSelf: "center",
+        margin : "10 rem",
+        fontSize:'10 rem'
+    },
+    menu : {
+        width: "60 rem",
+        height: "60 rem",
+        paddingVertical : "8 rem",
+        paddingHorizontal:"20 rem",
+        borderWidth: 1,
+        borderRadius : "7 rem",
+        borderColor: "#999999",
+        alignItems:'center' ,
+        justifyContent:'center'
+    },
+    boxHeading:{
+        width: "100 %",
+        paddingVertical : "5 rem",
+        paddingHorizontal:"10 rem",
+        borderWidth: 1,
+        borderRadius : "7 rem",
+        borderColor: "#999999",
     },
   });

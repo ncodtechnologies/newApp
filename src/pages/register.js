@@ -20,15 +20,21 @@ class App extends React.Component {
             <View style={styles.container}  >
             <View >
             <ScrollView showsVerticalScrollIndicator={false} >
-            <LabelHeader label={"Login"} />
+            <LabelHeader label={"Sign Up"} />
 
-            <LabelInput label={"Username"} />
+            <LabelInput label={"Name"} />
+            <Input  />
+            <LabelInput label={"Email"} />
+            <Input  />
+            <LabelInput label={"Mobile"} />
             <Input  />
             <LabelInput label={"Password"} />
             <Input  />
-            <Button label="Login" onPress={()=>this.props.navigation.navigate("MainMenu")} />
-            <ButtonLabel label={"Don't have an account ? Sign up"} />
-            <ButtonExtLogin />
+            <LabelInput label={"Confirm Password"} />
+            <Input  />
+            <Button label="Sign Up" onPress={()=>this.props.navigation.navigate("MainMenu")} />
+            <ButtonLabel label={"Have an Account? Login"} />
+            
             </ScrollView >
             </View>
             </View>
