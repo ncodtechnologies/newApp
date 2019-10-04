@@ -22,7 +22,7 @@ const assetsPath = "../../Assets/";
 
 export const Input = (props) => {
     return (
-        <TextInput style={styles.input} {...props}
+        <TextInput style={styles.input} {...props} 
             placeholderTextColor="#8d847d"
          />
     )
@@ -373,6 +373,58 @@ export const MenuItem = (props) => {
     )
 }
 
+export const Date = (props) => {
+    return (
+        <View style={{flex:1,flexDirection:'row',justifyContent:'space-between',paddingVertical:20}} >
+            <View   {...props}  >
+              <Text style={{ fontSize : 18,color:'#081344'}} >{props.btnName}Sep 18, 2019, 9.43 am</Text>
+            </View>
+            <View  style={{flexDirection:'row',}} {...props}  >
+                <Image style={{width:25,height:25}} source={require(`${assetsPath}Service/refresh.png`)} />
+                <Image style={{width:25,height:25}} source={require(`${assetsPath}Service/message.png`)} />
+            </View>
+        </View>
+    )
+}
+
+export const ServiceRequestCreated = (props) => {
+    
+    return (
+           
+            <View style={[styles.price,{justifyContent:'center',alignItems:'center'}]} >
+               <View>
+                <Text style={{fontSize:24,fontWeight:'bold',color:'#081344'}}>{props.title}</Text>
+                <View style={{ borderBottomWidth:1,padding:3,color:'#8d847d'}} >
+                </View>
+                <Text style={{fontSize:16,padding:5,textAlign:'center',color:'#8d847d'}}>{props.date} </Text>
+               </View>
+            </View>
+            )
+}
+
+export const TxtInput = (props) => {
+    return (
+        <TextInput style={styles.input} {...props}  placeholder={props.name}
+            placeholderTextColor="#8d847d"
+         />
+    )
+}
+
+export const FAQuestion = (props) => {
+    
+    return (
+           
+            <View>
+               <View style={{flexDirection:'row',justifyContent:'space-between', borderBottomWidth:1,padding:3,color:'#8d847d'}}>
+                    <Text style={{fontSize:22,fontWeight:'bold',color:'#081344'}}>{props.title}</Text>
+                    <Image style={{width:25,height:25}} source={require(`${assetsPath}FAQMenu/question.png`)} />
+               </View >
+               <View style={{padding:10}}>
+                <Text style={{fontSize:16,paddingHorizontal:40,textAlign:'center',color:'#8d847d'}}>{props.data}</Text>
+               </View>
+            </View>
+            )
+}
 const styles = EStyleSheet.create({
     loginfooter:{
         flex: 1,
@@ -695,7 +747,7 @@ const styles = EStyleSheet.create({
     },
     btnSlim:{
         width: "88 rem",
-        padding : "4 rem",
+        padding : "6 rem",
         backgroundColor : "#EF6174",
         borderRadius : "5 rem",
         alignItems : "center",
@@ -721,5 +773,6 @@ const styles = EStyleSheet.create({
         borderWidth: 1,
         borderRadius : "7 rem",
         borderColor: "#999999",
+        alignItems:'center' ,justifyContent:'center'
     },
   });

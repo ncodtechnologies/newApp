@@ -16,13 +16,13 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
-import Page from "./src/pages/login"
+import Page from "./src/pages/serviceDetailsList"
 
 const App: () => React$Node = () => {
   return (
     <>
       <StatusBar barStyle="dark-content" />
-      <SafeAreaView>
+      <SafeAreaView style={{flex:1}} >
         <Page />
       </SafeAreaView>
     </>
