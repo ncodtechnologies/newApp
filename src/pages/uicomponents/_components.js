@@ -320,11 +320,9 @@ export const FAQMenu = (props) => {
 
 export const BoxHeading = (props) => {
     return (
-        <View style={{ alignItems:'center' ,justifyContent:'center'}} >
             <View  style={styles.boxHeading}  {...props}  >
               <Text style={{ fontSize : 17,color:'#081344',padding:5}} >{props.btnName}</Text>
             </View>
-        </View>
     )
 }
 
@@ -375,7 +373,7 @@ export const MenuItem = (props) => {
 
 export const Date = (props) => {
     return (
-        <View style={{flex:1,flexDirection:'row',justifyContent:'space-between',paddingVertical:20}} >
+        <View style={{flex:1,flexDirection:'row',justifyContent:'space-between',padding:20}} >
             <View   {...props}  >
               <Text style={{ fontSize : 18,color:'#081344'}} >{props.btnName}Sep 18, 2019, 9.43 am</Text>
             </View>
@@ -391,12 +389,12 @@ export const ServiceRequestCreated = (props) => {
     
     return (
            
-            <View style={[styles.price,{justifyContent:'center',alignItems:'center'}]} >
+            <View style={[styles.price,{justifyContent:'center',alignItems:'center',marginTop:20}]} >
                <View>
-                <Text style={{fontSize:24,fontWeight:'bold',color:'#081344'}}>{props.title}</Text>
-                <View style={{ borderBottomWidth:1,padding:3,color:'#8d847d'}} >
-                </View>
-                <Text style={{fontSize:16,padding:5,textAlign:'center',color:'#8d847d'}}>{props.date} </Text>
+                 <Text style={{fontSize:24,fontWeight:'bold',color:'#081344'}}>{props.title}</Text>
+                 <View style={{ borderBottomWidth:1,padding:3,color:'#8d847d'}} >
+                 </View>
+                 <Text style={{fontSize:16,padding:5,textAlign:'center',color:'#8d847d'}}>{props.date} </Text>
                </View>
             </View>
             )
@@ -420,7 +418,7 @@ export const FAQuestion = (props) => {
                     <Image style={{width:25,height:25}} source={require(`${assetsPath}FAQMenu/question.png`)} />
                </View >
                <View style={{padding:10}}>
-                <Text style={{fontSize:16,paddingHorizontal:40,textAlign:'center',color:'#8d847d'}}>{props.data}</Text>
+                    <Text style={{fontSize:16,paddingHorizontal:40,textAlign:'center',color:'#8d847d'}}>{props.data}</Text>
                </View>
             </View>
             )
@@ -746,7 +744,7 @@ const styles = EStyleSheet.create({
         height: "18 rem",
     },
     btnSlim:{
-        width: "88 rem",
+        width: "95 rem",
         padding : "6 rem",
         backgroundColor : "#EF6174",
         borderRadius : "5 rem",
@@ -768,11 +766,10 @@ const styles = EStyleSheet.create({
     },
     boxHeading:{
         width: "100 %",
-        paddingVertical : "5 rem",
         paddingHorizontal:"10 rem",
         borderWidth: 1,
         borderRadius : "7 rem",
         borderColor: "#999999",
-        alignItems:'center' ,justifyContent:'center'
+        justifyContent:'center'
     },
   });
