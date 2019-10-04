@@ -9,12 +9,13 @@ import {
   CheckBox
 } from 'react-native';
 import EStyleSheet from 'react-native-extended-stylesheet';
+import {RFPercentage, RFValue} from 'react-native-responsive-fontsize';
 
 const entireScreenWidth = Dimensions.get('window').width;
 const entireScreenHeight = Dimensions.get('window').height;
 EStyleSheet.build({
     $rem: Math.min(entireScreenWidth,entireScreenHeight) / 380,
-    $inputFontSize: "15 rem",
+    $inputFontSize: RFPercentage(2),
     $inputTextColor: "#8d847d"
 });
 
@@ -375,7 +376,7 @@ export const Date = (props) => {
     return (
         <View style={{flex:1,flexDirection:'row',justifyContent:'space-between',padding:20}} >
             <View   {...props}  >
-              <Text style={{ fontSize : 18,color:'#081344'}} >{props.btnName}Sep 18, 2019, 9.43 am</Text>
+              <Text style={{ fontSize : RFValue(17),color:'#081344'}} >{props.btnName}Sep 18, 2019, 9.43 am</Text>
             </View>
             <View  style={{flexDirection:'row',}} {...props}  >
                 <Image style={{width:25,height:25}} source={require(`${assetsPath}Service/refresh.png`)} />
