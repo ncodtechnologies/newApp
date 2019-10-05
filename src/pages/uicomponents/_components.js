@@ -308,17 +308,6 @@ export const ButtonSlim = (props) => {
 }
 
 
-export const FAQMenu = (props) => {
-    return (
-        <View style={{ alignItems:'center' ,justifyContent:'center'}} >
-            <View  style={styles.menu}  {...props}  >
-                 <Image style={styles.file_img} source={require(`${assetsPath}File/file1.png`)} />
-            </View>
-            <Text style={{ fontSize : 14,color:'#081344',padding:5}} >{props.btnName} General</Text>
-        </View>
-    )
-}
-
 export const BoxHeading = (props) => {
     return (
             <View  style={styles.boxHeading}  {...props}  >
@@ -424,7 +413,39 @@ export const FAQuestion = (props) => {
             </View>
             )
 }
+
+
+export const FAQMenu = (props) => {
+
+    return (
+        <View style={styles.faqView}>
+            <View  style={styles.menu}  {...props}  >
+                 <Image style={styles.file_img} source={props.img} />
+            </View>
+            <Text style={styles.faqTxt} >{props.btnName} </Text>
+        </View>
+    )
+}
+
+export const LogoUnderline = (props) => {
+    return (
+        <View style={{ borderTopWidth:4,width:'30 %',borderColor:'#e2eae7'}} >
+        </View>
+    )
+}
 const styles = EStyleSheet.create({
+    faqView:{
+        alignItems:'center' ,
+        justifyContent:'center',
+        padding:10,
+        alignSelf: "center",
+        width:'28%'
+    },
+    faqTxt:{ 
+        fontSize : RFValue(11),
+        color:'#081344',
+        padding:5
+    },
     loginfooter:{
         flex: 1,
         alignItems: "center",
@@ -755,13 +776,11 @@ const styles = EStyleSheet.create({
         fontSize:'10 rem'
     },
     menu : {
-        width: "60 rem",
-        height: "60 rem",
-        paddingVertical : "8 rem",
-        paddingHorizontal:"20 rem",
+        width: "65 rem",
+        height: "70 rem",
         borderWidth: 1,
         borderRadius : "7 rem",
-        borderColor: "#999999",
+        borderColor: "#8d847d",
         alignItems:'center' ,
         justifyContent:'center'
     },

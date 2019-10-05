@@ -30,11 +30,6 @@ class App extends React.Component {
                     <FAQMenu btnName="Price"  img={require(`${assetsPath}FAQMenu/price.png`)}/>
                     <FAQMenu btnName="Support/Complanits" img={require(`${assetsPath}FAQMenu/support.png`)}/>
               </View>
-              <View style={{flexDirection:'row',justifyContent:'center'}} >
-                    <FAQMenu btnName="Using Service" img={require(`${assetsPath}FAQMenu/service.png`)}/>
-                    <FAQMenu btnName="Counter / Delivery" img={require(`${assetsPath}FAQMenu/delivery.png`)}/>
-                    <FAQMenu btnName="Have a question?" img={require(`${assetsPath}FAQMenu/qstn.png`)}/>
-              </View>
           </View>
     </>
   );
