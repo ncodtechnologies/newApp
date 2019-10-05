@@ -7,7 +7,7 @@ import {
   Image
 } from 'react-native';
 
-import {FAQMenu,LogoUnderline} from "./uicomponents/_components";
+import {FAQMenu,LogoUnderline,FAQuestion,FAQButton} from "./uicomponents/_components";
 import EStyleSheet from 'react-native-extended-stylesheet';
 
 const entireScreenWidth = Dimensions.get('window').width;
@@ -25,10 +25,10 @@ class App extends React.Component {
                     <LogoUnderline/>
                  </View >
               </View >
-              <View style={{flexDirection:'row',justifyContent:'center'}} >
-                    <FAQMenu btnName="General" img={require(`${assetsPath}FAQMenu/general.png`)}/>
-                    <FAQMenu btnName="Price"  img={require(`${assetsPath}FAQMenu/price.png`)}/>
-                    <FAQMenu btnName="Support/Complanits" img={require(`${assetsPath}FAQMenu/support.png`)}/>
+              <View style={{flexDirection:'column',justifyContent:'center',padding:30}} >
+                    <FAQButton btnName="General"/>
+                    <FAQuestion title="Question 1" data="A aksd akjsdhan cadkjsdna xjaskndcas jkdn cass sdkhad asdjkasa casjdas caskjdhaskd csajkchkjsdc sjakcbakjsdc sjkacskjdc sjkdcns djkszncx sjkdzxn sasDASF  dsfs"/>
+                    <FAQuestion title="Question 1" data="A aksd akjsdhan cadkjsdna xjaskndcas jkdn cass sdkhad asdjkasa casjdas caskjdhaskd csajkchkjsdc sjakcbakjsdc sjkacskjdc sjkdcns djkszncx sjkdzxn yui uyguyt"/>
               </View>
           </View>
     </>

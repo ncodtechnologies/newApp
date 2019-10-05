@@ -10,6 +10,7 @@ import {
 } from 'react-native';
 import EStyleSheet from 'react-native-extended-stylesheet';
 import {RFPercentage, RFValue} from 'react-native-responsive-fontsize';
+import Ionicons from 'react-native-vector-icons/Ionicons';
 
 const entireScreenWidth = Dimensions.get('window').width;
 const entireScreenHeight = Dimensions.get('window').height;
@@ -405,10 +406,11 @@ export const FAQuestion = (props) => {
             <View>
                <View style={{flexDirection:'row',justifyContent:'space-between', borderBottomWidth:1,padding:3,color:'#8d847d'}}>
                     <Text style={{fontSize:22,fontWeight:'bold',color:'#081344'}}>{props.title}</Text>
+                   
                     <Image style={{width:25,height:25}} source={require(`${assetsPath}FAQMenu/question.png`)} />
                </View >
-               <View style={{padding:10}}>
-                    <Text style={{fontSize:16,paddingHorizontal:40,textAlign:'center',color:'#8d847d'}}>{props.data}</Text>
+               <View style={{padding:5}}>
+                    <Text style={{fontSize:16,paddingHorizontal:40,textAlign:'center',color:'#081344'}}>{props.data}</Text>
                </View>
             </View>
             )
@@ -433,7 +435,26 @@ export const LogoUnderline = (props) => {
         </View>
     )
 }
+
+export const FAQButton= (props) => {
+    return (
+        <TouchableOpacity  style={styles.btnFAQ} {...props}  >
+            <Text style={{ fontSize : 16, color : "#FFF", fontWeight : "bold"}} >{props.btnName}</Text>
+        </TouchableOpacity>
+    )
+}
+
 const styles = EStyleSheet.create({
+    btnFAQ:{
+        width: "200 rem",
+        padding : "8 rem",
+        backgroundColor : "#081344",
+        borderRadius : "5 rem",
+        alignItems : "center",
+        alignSelf: "center",
+        margin : "10 rem",
+        fontSize:RFValue(10),
+    },
     faqView:{
         alignItems:'center' ,
         justifyContent:'center',
