@@ -206,7 +206,7 @@ export const PriceDetails = (props) => {
                 <Text style={{fontSize:24,fontWeight:'bold',color:'#081344'}}>{props.priceDt}</Text>
                 </View>
                 <View>
-                <Text style={styles.buttonAED}>{props.btnName} Attestation</Text>
+                <Text style={styles.buttonAED}>{props.btnName}</Text>
                 </View>
             </View>
             )
@@ -443,8 +443,68 @@ export const FAQButton= (props) => {
         </TouchableOpacity>
     )
 }
+export const VisaBorder = (props) => {
+    return (
+        <View style={{backgroundColor:'#081344'}} >
+            <Text style={styles.visaBorder} >{props.name}</Text>
+        </View>
+    )
+}
 
+export const VisaTitles = (props) => {
+    
+    return (
+           
+            <View style={[styles.price,{alignItems:'center',marginTop:20}]} >
+               <View>
+                 <Text style={{fontSize:22,fontWeight:'bold',color:'#081344'}}>{props.title}Visa stamping</Text>
+               </View>
+            </View>
+            )
+}
+export const TxtInputBold = (props) => {
+    return (
+        <TextInput style={[styles.input,{fontWeight:'bold',fontSize:18}]} {...props}  placeholder={props.name}
+            placeholderTextColor="#081344"
+         />
+    )
+}
+
+export const TxtInputMessage = (props) => {
+    return (
+        <TextInput style={[styles.input,{fontWeight:'bold',textAlignVertical: 'top',fontSize:18}]} {...props}  placeholder={props.name} multiline={true} numberOfLines={8}
+            placeholderTextColor="#081344"
+         />
+    )
+}
+
+export const SupportDetails = (props) => {
+    
+    return (
+           
+            <View style={{paddingHorizontal:10}} >
+                 <Text style={styles.supportDtTxt1}>{props.title}</Text>
+                 <Text style={styles.supportDtTxt2}>{props.data} </Text>
+            </View>
+            )
+}
 const styles = EStyleSheet.create({
+    supportDtTxt1:{
+        fontSize:18,
+        fontWeight:'bold',
+        fontStyle:'italic',
+        color:'#081344'
+    },
+    supportDtTxt2:{
+        fontSize:14,
+        padding:5,
+        color:'#081344'},
+    visaBorder:{ 
+        fontSize : 15,
+        color : "#FFF",
+        textAlign:'center',
+        padding:5
+    },
     btnFAQ:{
         width: "200 rem",
         padding : "8 rem",
@@ -740,9 +800,9 @@ const styles = EStyleSheet.create({
         fontSize:18,
     },
     btnPay : {
-        width: "280 rem",
+        width: "235 rem",
         padding : "18 rem",
-        backgroundColor : "#EF6174",
+        backgroundColor : "#f84563",
         borderRadius : "15 rem",
         alignItems : "center",
         alignSelf: "center",
