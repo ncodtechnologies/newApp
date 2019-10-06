@@ -313,7 +313,7 @@ export const ButtonSlim = (props) => {
 export const BoxHeading = (props) => {
     return (
             <View  style={styles.boxHeading}  {...props}  >
-              <Text style={{ fontSize : 17,color:'#081344',padding:5}} >{props.btnName}</Text>
+              <Text style={styles.boxHeadingTxt} >{props.btnName}</Text>
             </View>
     )
 }
@@ -504,19 +504,56 @@ export const FileUpload = (props) => {
         </View>
     )
 }
+export const VSText = (props) => {
+    return (
+        <View style={{justifyContent:'center',alignItems : "center",width:'80%',padding:10}} >
+               <Text style={{ color:'#081344',textAlign:'center', }}>hgjhsad sjdbksjdf kjsdfskjdhnfs skdjfhnsjd kfnksldn jkdsfslkdn cksdjns  ageed o the termd</Text>
+       </View>
+    )
+}
+
+export const TextTwo = (props) => {
+    
+    return (
+        <View style={{padding:10}}>
+            <View style={styles.txtBorder}>
+                 <Text style={[styles.textTwo,{color:'#081344'}]}>{props.txt1}</Text>
+                 <Text style={styles.textTwo}>{props.txt2} </Text>
+            </View>
+        </View>
+            )
+}
+
+
 const styles = EStyleSheet.create({
+    txtBorder:{
+    flexDirection:'row',
+    justifyContent:'space-between',
+    borderBottomWidth:1,
+    paddingVertical:5,
+    borderColor:'#081344'
+    },
+    textTwo:{
+        fontSize:RFValue(17),
+        color:'#081344'
+    },
+    boxHeadingTxt:{
+        fontSize : RFValue(18),
+        color:'#081344',
+        padding:5
+    },
     supportDtTxt1:{
-        fontSize:18,
+        fontSize:RFValue(18),
         fontWeight:'bold',
         fontStyle:'italic',
         color:'#081344'
     },
     supportDtTxt2:{
-        fontSize:14,
+        fontSize:RFValue(14),
         padding:5,
         color:'#081344'},
     visaBorder:{ 
-        fontSize : 15,
+        fontSize : RFValue(15),
         color : "#FFF",
         textAlign:'center',
         padding:5,
@@ -570,7 +607,7 @@ const styles = EStyleSheet.create({
     },
     myreqitem_status : {
         padding: "5 rem",
-        fontSize : "12 rem",
+        fontSize : RFValue(12),
         borderRadius: "5 rem",
     },
     myreqitem : {
@@ -583,13 +620,13 @@ const styles = EStyleSheet.create({
     myreqitem_text: {
         padding: "5 rem",
         color: "#4d4d4d",
-        fontSize : "12 rem",
+        fontSize : RFValue(12),
     },
     myreqitem_head: {
         fontWeight: "bold",
         padding: "5 rem",
         color: "#081344",
-        fontSize : "12 rem",
+        fontSize : RFValue(12),
     },
     no_request_body_text: {
         padding: "10 rem",
@@ -785,7 +822,7 @@ const styles = EStyleSheet.create({
         alignSelf: "center",
         textAlign:'center',
         color:'#FFF',
-        fontSize:18,
+        fontSize : RFValue(18),
     },
     price:{
         flexDirection:'row',
@@ -808,13 +845,13 @@ const styles = EStyleSheet.create({
     btnLong : {
         width: "100%",
         padding : "12 rem",
-        backgroundColor : "#295198",
+        backgroundColor : "#47489f",
         borderRadius : "7 rem",
         alignItems : "center",
         alignSelf: "center",
         textAlign:'center',
         color:'#FFF',
-        fontSize:18,
+        fontSize : RFValue(18),
     },
     btnPay : {
         width: "235 rem",
@@ -824,7 +861,7 @@ const styles = EStyleSheet.create({
         alignItems : "center",
         alignSelf: "center",
         margin : "8 rem",
-        fontSize:'18 rem'
+        fontSize : RFValue(18),
     },
     btnFile : {
         paddingVertical : "8 rem",
@@ -883,7 +920,7 @@ const styles = EStyleSheet.create({
         justifyContent:'center'
     },
     boxHeading:{
-        width: "100 %",
+        width: "85 %",
         paddingHorizontal:"10 rem",
         borderWidth: 1,
         borderRadius : "7 rem",
